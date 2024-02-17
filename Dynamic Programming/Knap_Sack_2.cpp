@@ -3,12 +3,12 @@
 #include<vector>
 #include <bits/stdc++.h>
 using namespace std;
-vector<vector<ll>> dp(105,vector<ll> (1000005,-1));
+ll dp[105][100005];
 ll f(vector<int> &wts,vector<int> &val,int idx,int tv){
     if(tv==0)   return 0;
     if(idx==wts.size())      return INT_MAX;
     if(dp[idx][tv]!=-1)  return dp[idx][tv];
-    ll ans=INT_MAX;
+    ll ans=INT_MAX; 
     
     //if not pick
     ans=min(ans,f(wts,val,idx+1,tv));
@@ -20,6 +20,7 @@ ll f(vector<int> &wts,vector<int> &val,int idx,int tv){
 }
 
 int main(){
+    memset(dp,-1,sizeof dp);
     int n,W;
     cin>>n>>W;
     vector<int> wts;
@@ -32,7 +33,7 @@ int main(){
         val.push_back(b);
     }
     int ans=-1;
-    for(int i=0;i<n*1000;i++){
+    for(int i=0;i<=n*1000;i++){
         if(f(wts,val,0,i)<=W)
             ans=i;
     }
