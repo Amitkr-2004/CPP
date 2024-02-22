@@ -1,4 +1,3 @@
-
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
@@ -21,5 +20,5 @@ int main(){
     }
     int x=(n+1)/2;
     memset(dp,-1,sizeof dp);
-    cout<<f(p,n-1,x);
+    cout<<fixed<<setprecision(9)<<f(p,n-1,x);
 }
