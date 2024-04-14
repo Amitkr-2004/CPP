@@ -60,13 +60,13 @@ int levels(Node* root){
     return ans;
 }
 void LeftView(Node* root,int level,vector<int> &ans){
-    if(root==NULL)  return;
+    if(root==NULL)  return; 
     ans[level]=root->val;
     LeftView(root->right,level+1,ans);
     LeftView(root->left,level+1,ans);
 }
 int main(){
-    int arr[]={1,7,9,INT_MIN,6,INT_MIN,0,8,7,13,INT_MIN};
+    int arr[]={1,INT_MIN,2};
     int n=sizeof(arr)/sizeof(arr[0]);
     Node* root=construct(arr,n);
     levelOrderQueue(root);
