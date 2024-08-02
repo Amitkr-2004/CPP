@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        ".env*": "dotenv",
         "array": "cpp",
         "atomic": "cpp",
         "*.tcc": "cpp",
@@ -45,6 +46,12 @@
         "set": "cpp",
         "bitset": "cpp",
         "regex": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "climits": "cpp"
+    },
+    "launch": {
+        
+        "configurations": [],
+        "compounds": []
     }
 }
