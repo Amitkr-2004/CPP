@@ -13,7 +13,7 @@ int main(){
     cin>>a>>b;
     n=fact(a);
     r=fact(b);
-    c=fact(a-b);
+    c=fact(a-b);    
     int comb=(n/(r*c));
     cout<<"the combination is "<<comb<<endl;
     int perm=(n/r);
